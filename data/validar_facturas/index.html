@@ -1,0 +1,77 @@
+<div class="loading2" id="loading2">&#8230;</div>
+<div class="main-content">	
+	<div class="main-content-inner">
+	    <div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="breadcrumb">
+				<li>
+					<i class="ace-icon fa fa-home home-icon"></i>
+					<a href="#/">Inicio</a>
+				</li>
+
+				<li class="active">Factura Venta</li>
+				<li class="active">Validar Facturas Venta</li>
+			</ul>
+		</div>
+
+	    <div class="page-content" style="background-color: #f5f5f5">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<i class="fa fa-edit"></i> Validar Comprobantes Facturas
+						</div>
+
+						<div class="panel-body">
+							<form class="form-horizontal" name="form_repositorio" id="form_repositorio" autocomplete="off">
+								<div class="row">
+									<div class="col-sm-12">
+		                            	<div class="col-md-3">
+			                                <div class="form-group">                                     
+			                                    <select id="select_Estados" name="select_Estados" tabindex="1" class="select2" data-placeholder="Estado Facturas"> 
+			                                        <option value="0" selected="">TODOS</option>
+			                                        <option value="1">AUTORIZADO</option>
+			                                        <option value="2">ERROR AL GENERAR DOCUMENTOS</option>
+			                                        <option value="3">AUTORIZADO CORREO NO ENVIADO</option>
+			                                        <option value="7">RECHAZADO NO AUTORIZADO</option>
+			                                        <option value="8">SIN FIRMAR ERROR EN EL WEB SERVICE</option>
+			                                        <option value="9">SIN FIRMAR SOLO GENERADO</option>
+			                                    </select>	                                                                      
+			                                </div>  
+		                            	</div>
+		                            	<div class="col-sm-2">
+			                                <div class="form-group">                                                    
+			                                    <div class="col-xs-12 col-sm-12">	                                       
+		                                            <div class="input-group col-xs-12 col-md-12">
+		                                                 <button type="button" id="btn_buscar" class="btn btn-sm btn-primary col-sm-12">
+		                                                   Buscar Facturas
+		                                                    <i class="ace-icon fa fa-search icon-on-right bigger-110"></i>
+		                                                </button>     
+		                                            </div>	                                        
+			                                    </div>
+			                                </div>
+			                            </div>
+			                        </div>
+
+									<div class="col-sm-12">
+										<div class="widget-box">
+								            <div class="widget-main"> 
+												<table id="table"></table>
+												<div id="pager"></div>                                           
+								            </div>
+								        </div>											
+									</div>	
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+
