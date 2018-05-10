@@ -16,39 +16,6 @@
 			<div class="row">
 				<div class="col-sm-12 infobox-container">
 
-					<div class="infobox infobox-green" style=" margin-right: 10px">
-						<div class="infobox-icon">
-							<i class="ace-icon fa fa-shopping-cart"></i>
-						</div>
-
-						<div class="infobox-data">
-							<span class="infobox-data-number">${{proformas}}</span>
-							<div class="infobox-content">PROFORMAS</div>
-						</div>
-					</div>
-
-					<div class="infobox infobox-blue" style=" margin-right: 10px">
-						<div class="infobox-icon">
-							<i class="ace-icon fa fa-shopping-cart"></i>
-						</div>
-
-						<div class="infobox-data">
-							<span class="infobox-data-number">${{factura_compra}}</span>
-							<div class="infobox-content">FACTURA COMPRA</div>
-						</div>
-					</div>
-
-					<div class="infobox infobox-pink" style=" margin-right: 10px">
-						<div class="infobox-icon">
-							<i class="ace-icon fa fa-shopping-cart"></i>
-						</div>
-
-						<div class="infobox-data">
-							<span class="infobox-data-number">${{factura_venta}}</span>
-							<div class="infobox-content">FACTURA VENTA</div>
-						</div>
-					</div>
-
 					<div class="infobox infobox-orange2" style=" margin-right: 10px">
 						<div class="infobox-icon">
 							<i class="ace-icon fa fa-shopping-cart"></i>
@@ -72,6 +39,17 @@
 						</div>
 					</div>
 
+					<div class="infobox infobox-pink" style=" margin-right: 10px">
+						<div class="infobox-icon">
+							<i class="ace-icon fa fa-shopping-cart"></i>
+						</div>
+
+						<div class="infobox-data">
+							<span class="infobox-data-number">${{factura_venta}}</span>
+							<div class="infobox-content">UTILIDAD</div>
+						</div>
+					</div>
+
 					<div class="space-6"></div>
 					<div class="space-6"></div>
 					<div class="space-6"></div>
@@ -80,35 +58,23 @@
 					<a href="#/clientes" style=" margin-right: 10px" >
 						<div class="infobox infobox-green infobox-small infobox-dark">
 							<div class="infobox-icon">
-								<i class="ace-icon fa fa-user"></i>
+								<i class="ace-icon fa fa-desktop"></i>
 							</div>
 
 							<div class="infobox-data">
-								<div class="infobox-content">CLIENTES</div>
+								<div class="infobox-content">INGRESOS</div>
 							</div>
 						</div>
 					</a>
 
-					<a href="#/productos" style=" margin-right: 10px" >
+					<a href="#/movimientos" style=" margin-right: 10px" >
 						<div class="infobox infobox-orange2 infobox-small infobox-dark">
 							<div class="infobox-icon">
 								<i class="ace-icon fa fa-cube"></i>
 							</div>
 
 							<div class="infobox-data">
-								<div class="infobox-content">ARTICULOS</div>
-							</div>
-						</div>
-					</a>
-
-					<a href="#/proformas" style=" margin-right: 10px" >
-						<div class="infobox infobox-grey infobox-small infobox-dark">
-							<div class="infobox-icon">
-								<i class="ace-icon fa fa-pencil-square-o"></i>
-							</div>
-
-							<div class="infobox-data">
-								<div class="infobox-content">PROFORMAS</div>
+								<div class="infobox-content">INVENTARIO</div>
 							</div>
 						</div>
 					</a>
@@ -140,95 +106,68 @@
 			</div>
 
 			<div class="hr hr32 hr-dotted"></div>
-
-			<div class="row">
-				<div class="col-sm-8">
-					<div class="panel panel-default column">
-						<div class="panel-heading" style="background-color: #283149; color: white" >
-							<h4 class="widget-title lighter smaller">
-								<i class="ace-icon fa fa-info blue"></i>
-								Información
-							</h4>
-						</div>
-
-						<div class="panel-body">
-							<div class="widget-main no-padding">
-								<div class="dialogs">
-									<h5 class="widget-title lighter smaller">Usuario:  {{usuario}}</h5>
-									<h5 class="widget-title lighter smaller">Conexión Anterior:  {{conexion}}</h5>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="panel panel-default column">
+									<div class="panel-heading" style="background-color: #283149; color: white">
+										<h5 class="widget-title">
+											<i class="ace-icon fa fa-signal blue"></i>
+											Productos por Agotar
+										</h5>
+									</div>
+			
+									<div class="body">
+										<div class="widget-main">
+											<!-- <hc-chart options="chartOptions">Placeholder for generic chart</hc-chart> -->
+											 <hc-pie-chart title="REPORTE FACTURACIÓN"  data="pieData" ></hc-pie-chart>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-
-
-					<div class="panel panel-default column">
-						<div class="panel-heading" style="background-color: #283149; color: white">
-							<h5 class="widget-title">
-								<i class="ace-icon fa fa-signal blue"></i>
-								Estadisticas
-							</h5>
-						</div>
-
-						<div class="body">
-							<div class="widget-main">
-								<!-- <hc-chart options="chartOptions">Placeholder for generic chart</hc-chart> -->
-     							<hc-pie-chart title="REPORTE FACTURACIÓN"  data="pieData" ></hc-pie-chart>
-							</div>
-						</div>
-					</div>
-	
-	
-
-
-				</div>
-				<div class="col-sm-4"  >
-					<div class="panel panel-default" >
-						<div class="panel-heading" style="background-color: #283149; color: white" >
-							<h4 class="widget-title lighter smaller" >
-								<i class="ace-icon fa fa-comments-o blue"></i>
-								Chat
-							</h4>
-						</div>
-
-						<div class="panel-body"  style="overflow-y: scroll; height: 500px" >
-							<div class="widget-main no-padding">
-								<div class="dialogs scrollbar" id="style-5">
-									<div class="itemdiv dialogdiv" ng-repeat="data in datos">
-										<div class="user">
-											<img ng-src="data/usuarios/{{data.imagen}}">
+							<div class="col-md-4">
+								<div class="panel panel-default column">
+									<div class="panel-heading" style="background-color: #283149; color: white">
+										<h5 class="widget-title">
+											<i class="ace-icon fa fa-signal blue"></i>
+											Productos por expirar
+										</h5>
+									</div>
+			
+									<div class="body">
+										<div class="widget-main">
+											<!-- <hc-chart options="chartOptions">Placeholder for generic chart</hc-chart> -->
+											
+											 <hc-pie-chart title="REPORTE FACTURACIÓN"  data="pieData" width="100%" ></hc-pie-chart>
 										</div>
-
-										<div class="body">
-											<div class="time">
-												<i class="ace-icon fa fa-clock-o"></i>
-												<span class="green">{{data.fecha}}</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="panel panel-default column">
+									<div class="panel-heading" style="background-color: #283149; color: white" >
+										<h4 class="widget-title lighter smaller">
+											<i class="ace-icon fa fa-info blue"></i>
+											Información
+										</h4>
+									</div>			
+									<div class="panel-body">
+										<div class="widget-main no-padding">
+											<div class="dialogs">
+												<h5 class="widget-title lighter smaller">Usuario:  {{usuario}}</h5>
+												<h5 class="widget-title lighter smaller">Conexión Anterior:  {{conexion}}</h5>
 											</div>
-
-											<div class="name">{{data.nombres_completos}}</div>
-											<div class="text">{{data.mensaje}}</div>
 										</div>
 									</div>
 								</div>
-
-								<form class="form-horizontal" name="form_enviar" id="form_enviar">
-									<div class="form-actions">
-										<div class="input-group">
-											<input placeholder="Escribe tu mensaje aquí..." type="text" class="form-control" name="message" id="message" ng-keydown="myFunction($event)" />
-											<span class="input-group-btn">
-												<button class="btn btn-sm btn-info no-radius" type="button" name="btnEnviar" id="btnEnviar" ng-click="enviar_chat(data)">
-													<i class="ace-icon fa fa-share"></i>
-													Enviar
-												</button>
-											</span>
-										</div>
-									</div>
-								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+	
 
 			
 		</div>

@@ -17,7 +17,7 @@
 		while ($row = $class->fetch_array($resultado)) {
 			$data[] = array('name' => $row[1], 'y' => intval($row[2]));
 		}
-
+ 
 		echo $data = json_encode($data);
 	}
 	// fin
